@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B44A60C725C34AF800260B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60C625C34AF800260B21 /* AppDelegate.swift */; };
 		B44A60C925C34AF800260B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60C825C34AF800260B21 /* SceneDelegate.swift */; };
-		B44A60CB25C34AF800260B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60CA25C34AF800260B21 /* ViewController.swift */; };
-		B44A60CE25C34AF900260B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44A60CC25C34AF900260B21 /* Main.storyboard */; };
 		B44A60D025C34B0200260B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44A60CF25C34B0200260B21 /* Assets.xcassets */; };
 		B44A60D325C34B0200260B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44A60D125C34B0200260B21 /* LaunchScreen.storyboard */; };
+		B44A60DF25C3A9CC00260B21 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60DE25C3A9CC00260B21 /* SearchViewController.swift */; };
+		B44A60E225C3AA4500260B21 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60E125C3AA4500260B21 /* FavoritesListViewController.swift */; };
+		B44A60E625C3BAB500260B21 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60E525C3BAB500260B21 /* GFButton.swift */; };
+		B44A60E925C449FF00260B21 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60E825C449FF00260B21 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B44A60C325C34AF800260B21 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A60C625C34AF800260B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B44A60C825C34AF800260B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B44A60CA25C34AF800260B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B44A60CD25C34AF900260B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B44A60CF25C34B0200260B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B44A60D225C34B0200260B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B44A60D425C34B0200260B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B44A60DE25C3A9CC00260B21 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B44A60E125C3AA4500260B21 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		B44A60E525C3BAB500260B21 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		B44A60E825C449FF00260B21 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				B44A60C625C34AF800260B21 /* AppDelegate.swift */,
 				B44A60C825C34AF800260B21 /* SceneDelegate.swift */,
-				B44A60CA25C34AF800260B21 /* ViewController.swift */,
-				B44A60CC25C34AF900260B21 /* Main.storyboard */,
+				B44A60DE25C3A9CC00260B21 /* SearchViewController.swift */,
+				B44A60E125C3AA4500260B21 /* FavoritesListViewController.swift */,
 				B44A60CF25C34B0200260B21 /* Assets.xcassets */,
 				B44A60D125C34B0200260B21 /* LaunchScreen.storyboard */,
 				B44A60D425C34B0200260B21 /* Info.plist */,
+				B44A60E525C3BAB500260B21 /* GFButton.swift */,
+				B44A60E825C449FF00260B21 /* GFTextField.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -126,7 +132,6 @@
 			files = (
 				B44A60D325C34B0200260B21 /* LaunchScreen.storyboard in Resources */,
 				B44A60D025C34B0200260B21 /* Assets.xcassets in Resources */,
-				B44A60CE25C34AF900260B21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B44A60CB25C34AF800260B21 /* ViewController.swift in Sources */,
+				B44A60E925C449FF00260B21 /* GFTextField.swift in Sources */,
+				B44A60E225C3AA4500260B21 /* FavoritesListViewController.swift in Sources */,
+				B44A60E625C3BAB500260B21 /* GFButton.swift in Sources */,
+				B44A60DF25C3A9CC00260B21 /* SearchViewController.swift in Sources */,
 				B44A60C725C34AF800260B21 /* AppDelegate.swift in Sources */,
 				B44A60C925C34AF800260B21 /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +154,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B44A60CC25C34AF900260B21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B44A60CD25C34AF900260B21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B44A60D125C34B0200260B21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = live.iryna.GitHubFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = live.iryna.GitHubFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
