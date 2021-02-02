@@ -12,6 +12,7 @@
 		B41496DC25C91716003C9321 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41496DB25C91716003C9321 /* FollowerCell.swift */; };
 		B41496DF25C917F6003C9321 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41496DE25C917F6003C9321 /* GFAvatarImageView.swift */; };
 		B41496E225C99562003C9321 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41496E125C99562003C9321 /* UIHelper.swift */; };
+		B41496E525C9AE79003C9321 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41496E425C9AE79003C9321 /* GFEmptyStateView.swift */; };
 		B44A60C725C34AF800260B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60C625C34AF800260B21 /* AppDelegate.swift */; };
 		B44A60C925C34AF800260B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A60C825C34AF800260B21 /* SceneDelegate.swift */; };
 		B44A60D025C34B0200260B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44A60CF25C34B0200260B21 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		B41496DB25C91716003C9321 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		B41496DE25C917F6003C9321 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		B41496E125C99562003C9321 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		B41496E425C9AE79003C9321 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		B44A60C325C34AF800260B21 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A60C625C34AF800260B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B44A60C825C34AF800260B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				B44A60EF25C4701D00260B21 /* GFTitleLabel.swift */,
 				B44A60F225C4805D00260B21 /* GFBodyLabel.swift */,
 				B41496DE25C917F6003C9321 /* GFAvatarImageView.swift */,
+				B41496E425C9AE79003C9321 /* GFEmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				B44A60F325C4805D00260B21 /* GFBodyLabel.swift in Sources */,
 				B44A610225C4993200260B21 /* Follower.swift in Sources */,
 				B44A60F025C4701D00260B21 /* GFTitleLabel.swift in Sources */,
+				B41496E525C9AE79003C9321 /* GFEmptyStateView.swift in Sources */,
 				B41496CD25C905A0003C9321 /* NetworkManager.swift in Sources */,
 				B44A60DF25C3A9CC00260B21 /* SearchViewController.swift in Sources */,
 				B44A60C725C34AF800260B21 /* AppDelegate.swift in Sources */,
