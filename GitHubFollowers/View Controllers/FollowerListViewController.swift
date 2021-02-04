@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol FollowerListViewControllerDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowerListViewController: UIViewController {
 
     enum Section {
         case main
     }
 
-    var userName: String!
+    var username: String!
     var followers: [Follower] = []
     var filteredFollowers: [Follower] = []
     var page = 1
@@ -28,7 +32,7 @@ class FollowerListViewController: UIViewController {
         configureViewController()
         configureSearchController()
         configureCollectionView()
-        getFollowers(username: userName, page: page)
+        getFollowers(username: username, page: page)
         configureDataSource()
     }
 
@@ -61,7 +65,7 @@ class FollowerListViewController: UIViewController {
 
     func getFollowers(username: String, page: Int) {
         showLoadingView()
-        NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
+        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
 
@@ -114,7 +118,7 @@ extension FollowerListViewController: UICollectionViewDelegate {
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page += 1
-            getFollowers(username: userName, page: page)
+            getFollowers(username: username, page: page)
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -122,7 +126,8 @@ extension FollowerListViewController: UICollectionViewDelegate {
         let follower = activeArray[indexPath.item]
 
         let destinationViewController = UserInfoViewController()
-        destinationViewController.userName = follower.login
+        destinationViewController.username = follower.login
+        destinationViewController.delegate = self
         let navController = UINavigationController(rootViewController: destinationViewController)
         present(navController, animated: true)
     }
@@ -140,5 +145,18 @@ extension FollowerListViewController: UISearchResultsUpdating, UISearchBarDelega
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
         updateData(on: followers)
+    }
+}
+
+extension FollowerListViewController: FollowerListViewControllerDelegate {
+
+    func didRequestFollowers(for username: String) {
+        self.username = username
+        title = username
+        page = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        getFollowers(username: username, page: page)
     }
 }

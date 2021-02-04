@@ -10,10 +10,10 @@ import UIKit
 class SearchViewController: UIViewController {
 
     let logoImageView = UIImageView()
-    let userNameTextField = GFTextField()
+    let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
 
-    var isUserNameEntered: Bool { return !userNameTextField.text!.isEmpty }
+    var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 
-    // TODO: Include Regular Expressions Validation for Username string typed in UserNameTextField,
+    // TODO: Include Regular Expressions Validation for Username string typed in UsernameTextField,
     /* Alphanumeric,
        Can include "-",
        No consecutin=ve "-",
@@ -42,13 +42,13 @@ class SearchViewController: UIViewController {
      */
 
     @objc func pushFollowerListViewController() {
-        guard isUserNameEntered else {
+        guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username so that the system knows who you are looking for 😄", buttonTitle: "Ok")
             return }
 
         let followerListViewController = FollowerListViewController()
-        followerListViewController.userName = userNameTextField.text
-        followerListViewController.title = userNameTextField.text
+        followerListViewController.username = usernameTextField.text
+        followerListViewController.title = usernameTextField.text
         navigationController?.pushViewController(followerListViewController, animated: true)
     }
 
@@ -67,14 +67,14 @@ class SearchViewController: UIViewController {
     }
 
     func configureTextField() {
-        view.addSubview(userNameTextField)
-        userNameTextField.delegate = self
+        view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
 
         NSLayoutConstraint.activate([
-            userNameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
-            userNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            userNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            userNameTextField.heightAnchor.constraint(equalToConstant: 50)
+            usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
+            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 

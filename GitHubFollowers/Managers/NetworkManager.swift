@@ -14,11 +14,11 @@ class NetworkManager {
 
     private init() {}
 
-    func getFollowers(for userName: String, page: Int, completed: @escaping (Result<[Follower], GFErrorMessage>) ->  Void) {
-        let endpoint = baseURL + "\(userName)/followers?per_page=100&page=\(page)"
+    func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFErrorMessage>) ->  Void) {
+        let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
 
         guard let url = URL(string: endpoint) else {
-            completed(.failure(.invalidUserName))
+            completed(.failure(.invalidUsername))
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -51,11 +51,11 @@ class NetworkManager {
         task.resume()
     }
 
-    func getUserInfo(for userName: String, completed: @escaping (Result<User, GFErrorMessage>) ->  Void) {
-        let endpoint = baseURL + "\(userName)"
+    func getUserInfo(for username: String, completed: @escaping (Result<User, GFErrorMessage>) ->  Void) {
+        let endpoint = baseURL + "\(username)"
 
         guard let url = URL(string: endpoint) else {
-            completed(.failure(.invalidUserName))
+            completed(.failure(.invalidUsername))
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
