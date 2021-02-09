@@ -39,6 +39,7 @@
 		B4AA25BC25CBAA0500C91D36 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA25BB25CBAA0500C91D36 /* Date+Ext.swift */; };
 		B4AA25BF25CBAA9800C91D36 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA25BE25CBAA9800C91D36 /* String+Ext.swift */; };
 		B4AA25C225CC327A00C91D36 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA25C125CC327A00C91D36 /* PersistenceManager.swift */; };
+		B4AA25CA25D22B9C00C91D36 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA25C925D22B9C00C91D36 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		B4AA25BB25CBAA0500C91D36 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B4AA25BE25CBAA9800C91D36 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B4AA25C125CC327A00C91D36 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B4AA25C925D22B9C00C91D36 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B41496DB25C91716003C9321 /* FollowerCell.swift */,
+				B4AA25C925D22B9C00C91D36 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				B44A60E625C3BAB500260B21 /* GFButton.swift in Sources */,
 				B41496EB25CAE766003C9321 /* GFUserInfoHeaderViewController.swift in Sources */,
 				B4AA25AF25CB2D1F00C91D36 /* GFItemInfoView.swift in Sources */,
+				B4AA25CA25D22B9C00C91D36 /* FavoriteCell.swift in Sources */,
 				B44A60EC25C4634B00260B21 /* FollowerListViewController.swift in Sources */,
 				B41496DC25C91716003C9321 /* FollowerCell.swift in Sources */,
 				B41496D225C90F06003C9321 /* GFError.swift in Sources */,
