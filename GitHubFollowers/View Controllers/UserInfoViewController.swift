@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SafariServices
 
 protocol UserInfoViewControllerDelegate: class {
     func didTapGitHubProfile(for user: User)
