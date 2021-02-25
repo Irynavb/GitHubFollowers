@@ -39,7 +39,7 @@ class GFUserInfoHeaderViewController: UIViewController {
 
 
     func configureUIElements() {
-        downloadUserImage()
+        avatarImageView.downloadUserImage(fromURL: user.avatarUrl)
         
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
@@ -49,16 +49,6 @@ class GFUserInfoHeaderViewController: UIViewController {
 
         locationImageView.image = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
-    }
-
-    func downloadUserImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl)  { [weak self] image in
-            guard let self = self else { return }
-
-            DispatchQueue.main.async {
-                self.avatarImageView.image = image
-            }
-        }
     }
 
     func layoutUI() {
